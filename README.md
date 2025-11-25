@@ -12,6 +12,11 @@ Ein moderner, sicherer Passwort-, PIN- und Passphrasen-Generator als Desktop-App
 - **Echtzeit-Aktualisierung** bei jeder Änderung
 - **Kryptografisch sicher** (Web Crypto API)
 
+## ✨ Todos:
+
+- Password Hash..
+- Auto safety scan von passwortstärke mit z,b (google PW Json Export)
+
 ## 📄 Lizenz
 
 MIT License - siehe [LICENSE](LICENSE)
