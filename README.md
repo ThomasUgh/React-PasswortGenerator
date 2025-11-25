@@ -11,3 +11,9 @@ Ein moderner, sicherer Passwort-, PIN- und Passphrasen-Generator als Desktop-App
 - **Dark/Light Mode**
 - **Echtzeit-Aktualisierung** bei jeder Änderung
 - **Kryptografisch sicher** (Web Crypto API)
+
+## 📄 Lizenz
+
+MIT License - siehe [LICENSE](LICENSE)
+
+---
