@@ -1,4 +1,4 @@
-import { app, BrowserWindow, shell } from 'electron'
+import { app, BrowserWindow, shell, Menu } from 'electron'
 import { join } from 'path'
 
 let mainWindow: BrowserWindow | null = null
@@ -6,11 +6,15 @@ let mainWindow: BrowserWindow | null = null
 const isDev = process.env.NODE_ENV === 'development' || !app.isPackaged
 
 function createWindow() {
+  // Menüleiste komplett entfernen
+  Menu.setApplicationMenu(null)
+
   mainWindow = new BrowserWindow({
     width: 700,
     height: 900,
     minWidth: 400,
     minHeight: 600,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: join(__dirname, 'preload.js'),
       nodeIntegration: false,
