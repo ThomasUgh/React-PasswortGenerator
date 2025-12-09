@@ -690,7 +690,7 @@ function App() {
       )}
 
       <footer className="footer">
-        <p>Made with ❤️ by <a href="https://github.com/thomasu" target="_blank" rel="noopener noreferrer">Thomas U.</a></p>
+        <p>Made with ❤️ by <a href="https://github.com/ThomasUgh" target="_blank" rel="noopener noreferrer">Thomas U.</a></p>
         <p style={{ marginTop: '6px' }}>Open Source · MIT Lizenz</p>
       </footer>
     </div>
