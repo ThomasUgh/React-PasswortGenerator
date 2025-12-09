@@ -16,7 +16,9 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true
     },
-    icon: join(__dirname, '../public/icon.png'),
+    icon: isDev 
+      ? join(__dirname, '../public/icon.png')
+      : join(process.resourcesPath || __dirname, '../public/icon.png'),
     titleBarStyle: 'default',
     show: false,
     backgroundColor: '#0f172a'
