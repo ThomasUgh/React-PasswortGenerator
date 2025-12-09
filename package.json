@@ -36,12 +36,19 @@
   "build": {
     "appId": "com.securegen.app",
     "productName": "SecureGen",
+    "asar": true,
+    "asarUnpack": [
+      "**/*.node",
+      "**/node_modules/ffmpeg-static/*",
+      "**/node_modules/sharp/*"
+    ],
     "directories": {
       "output": "release"
     },
     "files": [
       "dist/**/*",
-      "dist-electron/**/*"
+      "dist-electron/**/*",
+      "!**/*.map"
     ],
     "win": {
       "target": [
@@ -54,22 +61,32 @@
           "arch": ["x64"]
         }
       ],
-      "icon": "public/icon.png"
+      "icon": "public/icon.ico",
+      "artifactName": "${productName}-${version}-Setup.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-Portable.${ext}"
     },
     "mac": {
-      "target": ["dmg"],
-      "icon": "public/icon.png"
+      "target": ["dmg", "zip"],
+      "icon": "public/icon.png",
+      "artifactName": "${productName}-${version}-macOS.${ext}"
     },
     "linux": {
       "target": ["AppImage", "deb"],
-      "icon": "public/icon.png"
+      "icon": "public/icon.png",
+      "artifactName": "${productName}-${version}-Linux.${ext}"
     },
     "nsis": {
       "oneClick": false,
+      "perMachine": false,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "public/icon.png",
-      "uninstallerIcon": "public/icon.png",
-      "installerHeaderIcon": "public/icon.png"
+      "installerIcon": "public/icon.ico",
+      "uninstallerIcon": "public/icon.ico",
+      "installerHeaderIcon": "public/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "SecureGen"
     }
   }
 }
